@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Paid Media Track Record · Maja Jankowska</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --lav:#EEF0FF;--lav2:#E8EAF8;
+  --pill:#F0EDF8;--pill-t:#5B4B8A;
+  --white:#fff;--border:#E5E7EB;
+  --text:#111827;--sub:#4B5563;--muted:#9CA3AF;
+  --accent:#1A1040;--green:#059669;--green-l:#ECFDF5;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--lav);color:var(--text);overflow-x:hidden;line-height:1.6}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(238,240,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.6)}
+.nav-logo{font-size:0.85rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--text);text-decoration:none;display:block}
+.nav-links{display:flex;align-items:center;gap:1.75rem}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--sub);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-badge{font-size:0.7rem;font-weight:600;background:var(--pill);color:var(--pill-t);padding:0.3rem 0.85rem;border-radius:100px}
+.nav-cta{background:var(--accent)!important;color:#fff!important;padding:0.5rem 1.3rem;border-radius:100px;font-size:0.82rem;font-weight:600;text-decoration:none}
+.hero{background:linear-gradient(160deg,#F3F0FF 0%,#EEF0FF 45%,#FCF0F8 100%);padding:3.5rem 2.5rem 3rem}
+.hero-inner{max-width:1100px;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:0.4rem;background:var(--pill);color:var(--pill-t);font-size:0.7rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:0.38rem 0.9rem;border-radius:100px;margin-bottom:1.25rem}
+.hero h1{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;color:var(--text);max-width:760px;margin-bottom:1.1rem}
+.hero-sub{font-size:0.95rem;color:var(--sub);max-width:620px;line-height:1.75;margin-bottom:1.75rem}
+.meta-pills{display:flex;gap:0.65rem;flex-wrap:wrap}
+.meta-pill{background:var(--white);border-radius:100px;padding:0.42rem 1rem;box-shadow:0 2px 10px rgba(0,0,0,0.06);font-size:0.75rem;color:var(--sub)}
+.meta-pill strong{color:var(--text);font-weight:600}
+.stats-bar{background:var(--accent);padding:2.25rem 2.5rem}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat-val{font-size:2.2rem;font-weight:900;color:#fff;line-height:1;margin-bottom:0.3rem}
+.stat-label{font-size:0.72rem;color:rgba(255,255,255,0.6);line-height:1.4}
+.wrap{max-width:1100px;margin:0 auto}
+.section{padding:4rem 2.5rem}
+.section-alt{background:var(--lav2);padding:4rem 2.5rem}
+.pill{display:inline-flex;align-items:center;gap:0.4rem;background:var(--pill);color:var(--pill-t);font-size:0.7rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:100px;margin-bottom:0.85rem}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:var(--text);letter-spacing:-0.025em;line-height:1.2;margin-bottom:0.7rem}
+.body-p{font-size:0.9rem;color:var(--sub);line-height:1.8;margin-bottom:0.9rem;max-width:640px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.two-col-wide{display:grid;grid-template-columns:3fr 2fr;gap:3rem;align-items:start}
+.card{background:var(--white);border-radius:1.25rem;box-shadow:0 2px 14px rgba(0,0,0,0.06);padding:1.75rem}
+.mini-metrics{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.mini-metric{background:var(--white);border-radius:1rem;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.mini-metric.span2{grid-column:span 2}
+.mini-val{font-size:1.7rem;font-weight:900;color:var(--text);line-height:1;margin-bottom:0.25rem}
+.mini-val.green{color:var(--green)}
+.mini-lbl{font-size:0.72rem;color:var(--sub);line-height:1.4}
+.flow-card{background:var(--white);border-radius:1.25rem;box-shadow:0 2px 14px rgba(0,0,0,0.06);padding:1.75rem;margin-top:1.75rem}
+.flow{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:0}
+.flow-node{background:var(--lav);border:1px solid var(--border);border-radius:0.8rem;padding:0.8rem 0.9rem;text-align:center;min-width:100px}
+.flow-node.dark{background:var(--accent);border-color:var(--accent)}
+.flow-node.dark .fn-strong{color:#fff}
+.flow-node.dark .fn-sub{color:rgba(255,255,255,0.6)}
+.fn-icon{font-size:1.1rem;margin-bottom:0.25rem}
+.fn-strong{font-size:0.68rem;font-weight:700;color:var(--text);display:block}
+.fn-sub{font-size:0.6rem;color:var(--sub);display:block;margin-top:0.1rem;line-height:1.3}
+.flow-arr{color:var(--muted);font-size:1rem;padding:0 0.25rem;flex-shrink:0}
+.steps{display:flex;flex-direction:column;position:relative;padding-left:1.75rem}
+.steps::before{content:'';position:absolute;left:13px;top:16px;bottom:16px;width:1.5px;background:var(--border)}
+.step{position:relative;padding:1.1rem 0;border-bottom:1px solid var(--border)}
+.step:last-child{border-bottom:none}
+.step-num{position:absolute;left:-1.75rem;top:1.25rem;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:var(--sub);transition:all 0.2s}
+.step:hover .step-num{border-color:var(--accent);color:var(--accent);background:var(--pill)}
+.step-tag{font-size:0.62rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--pill-t);margin-bottom:0.2rem}
+.step h4{font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.25rem}
+.step p{font-size:0.78rem;color:var(--sub);line-height:1.6}
+.pullquote{border-left:3px solid var(--accent);padding:1.1rem 1.4rem;background:var(--white);border-radius:0 1rem 1rem 0;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin:1.75rem 0}
+.pullquote p{font-size:1rem;font-style:italic;color:var(--text);line-height:1.65;font-weight:500}
+.pullquote cite{font-size:0.7rem;color:var(--sub);display:block;margin-top:0.5rem}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.result-card{background:var(--white);border-radius:1rem;padding:1.4rem;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.res-label{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--sub);margin-bottom:0.35rem}
+.res-val{font-size:1.7rem;font-weight:900;color:var(--text);line-height:1;margin-bottom:0.2rem}
+.res-val.green{color:var(--green)}
+.res-desc{font-size:0.72rem;color:var(--sub);line-height:1.5}
+.tech-row{display:flex;gap:0.45rem;flex-wrap:wrap;margin-top:1.25rem}
+.tech-tag{font-size:0.7rem;font-weight:500;background:var(--white);border:1px solid var(--border);color:var(--sub);padding:0.32rem 0.75rem;border-radius:100px;transition:all 0.2s}
+.tech-tag:hover{border-color:var(--accent);color:var(--accent)}
+.page-footer{background:var(--accent);padding:2.75rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.pf-info p{font-size:0.72rem;color:rgba(255,255,255,0.5);margin-bottom:0.2rem}
+.pf-info strong{font-size:0.85rem;color:#fff}
+.pf-links{display:flex;gap:0.65rem;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--accent);padding:0.72rem 1.4rem;border-radius:100px;font-size:0.8rem;font-weight:700;text-decoration:none;transition:opacity 0.2s;display:inline-block}
+.btn-white:hover{opacity:0.9}
+.btn-ghost-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);padding:0.72rem 1.4rem;border-radius:100px;font-size:0.8rem;font-weight:600;text-decoration:none;transition:border-color 0.2s;display:inline-block}
+.btn-ghost-w:hover{border-color:#fff}
+.fade{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease}
+.fade.in{opacity:1;transform:none}
+@media(max-width:768px){
+  nav{padding:0.9rem 1.25rem}
+  .hero{padding:2.5rem 1.25rem 2rem}
+  .section{padding:3rem 1.25rem}.section-alt{padding:3rem 1.25rem}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .two-col,.two-col-wide{grid-template-columns:1fr}
+  .mini-metrics{grid-template-columns:1fr 1fr}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .flow{flex-direction:column}.flow-arr{transform:rotate(90deg)}
+  .page-footer{padding:2rem 1.25rem}
+}
+
+
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border)}
+.kpi-cell{padding:1.25rem 1.4rem;border-right:1px solid var(--border)}
+.kpi-cell:last-child{border-right:none}
+.kpi-label{font-size:0.62rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--sub);margin-bottom:0.35rem}
+.kpi-val{font-size:1.65rem;font-weight:900;color:var(--text);line-height:1;margin-bottom:0.2rem}
+.kpi-delta{display:inline-flex;align-items:center;gap:0.2rem;font-size:0.68rem;font-weight:600;padding:0.18rem 0.55rem;border-radius:100px}
+.delta-up{background:var(--green-l);color:var(--green)}
+.delta-dn{background:#FEF2F2;color:#DC2626}
+.period-tabs{display:flex;gap:0.35rem}
+.ptab{font-size:0.68rem;font-weight:600;padding:0.28rem 0.7rem;border-radius:100px;border:1px solid var(--border);color:var(--sub);background:transparent;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif}
+.ptab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.bar-chart{display:flex;flex-direction:column;gap:0.55rem}
+.bar-item{display:flex;align-items:center;gap:0.7rem}
+.bar-mkt{font-size:0.68rem;color:var(--sub);width:76px;text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:22px;background:var(--lav2);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.45rem;transition:width 1.2s cubic-bezier(0.4,0,0.2,1)}
+.bar-fill span{font-size:0.6rem;color:#fff;font-weight:600;white-space:nowrap}
+.bar-delta{font-size:0.62rem;width:42px;text-align:right;flex-shrink:0;font-weight:600;color:var(--green)}
+.ch-breakdown{display:flex;flex-direction:column;gap:0.7rem}
+.ch-row{display:flex;flex-direction:column;gap:0.25rem}
+.ch-top{display:flex;justify-content:space-between}
+.ch-name{font-size:0.68rem;color:var(--text);font-weight:500}
+.ch-pct{font-size:0.68rem;color:var(--sub)}
+.ch-bar{height:6px;background:var(--lav2);border-radius:100px;overflow:hidden}
+.ch-fill{height:100%;border-radius:100px;transition:width 1.2s ease}
+.chart-area{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;padding:1.4rem}
+.chart-label{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--sub);margin-bottom:1rem}
+.dashboard{background:var(--white);border-radius:1.25rem;box-shadow:0 2px 14px rgba(0,0,0,0.07);overflow:hidden;margin-top:1.75rem}
+.dash-head{background:var(--lav2);padding:0.9rem 1.4rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem}
+.dash-title{font-size:0.72rem;font-weight:600;color:var(--sub);letter-spacing:0.04em}
+.tbl-wrap{overflow-x:auto;border-top:1px solid var(--border)}
+table{width:100%;border-collapse:collapse}
+th{font-size:0.62rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--sub);padding:0.7rem 1.25rem;text-align:left;border-bottom:1px solid var(--border);background:var(--lav2)}
+td{padding:0.82rem 1.25rem;border-bottom:1px solid var(--border);font-size:0.8rem;color:var(--sub)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--lav)}
+td strong{color:var(--text);font-weight:600}
+.num{font-family:monospace;font-size:0.75rem}
+.num.good{color:var(--green);font-weight:600}
+.num.bad{color:#DC2626;font-weight:600}
+.status{display:inline-block;font-size:0.6rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:100px}
+.s-live{background:var(--green-l);color:var(--green)}
+.s-done{background:var(--lav2);color:var(--sub)}
+.ch-card{background:var(--white);border-radius:1rem;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:transform 0.2s}
+.ch-card:hover{transform:translateY(-2px)}
+.ch-card-head{padding:1.1rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:0.75rem}
+.ch-icon{font-size:1.3rem;flex-shrink:0}
+.ch-card-name{font-size:0.88rem;font-weight:700;color:var(--text);margin-bottom:0.15rem}
+.ch-card-type{font-size:0.68rem;color:var(--sub)}
+.ch-kpis{padding:0.6rem 1.25rem 1.1rem}
+.ch-kpi{display:flex;justify-content:space-between;padding:0.35rem 0;border-bottom:1px solid var(--border);font-size:0.75rem}
+.ch-kpi:last-child{border-bottom:none}
+.ch-kpi-k{color:var(--sub)}
+.ch-kpi-v{color:var(--text);font-weight:500}
+.ch-kpi-v.good{color:var(--green)}
+.ch-kpi-v.bad{color:#DC2626}
+.channel-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.opt-log{background:var(--white);border-radius:1.25rem;box-shadow:0 2px 14px rgba(0,0,0,0.06);overflow:hidden;margin-top:1.5rem}
+.opt-log-head{background:var(--lav2);padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--sub);border-bottom:1px solid var(--border)}
+.opt-entry{display:grid;grid-template-columns:72px 1fr 80px;gap:1rem;padding:0.9rem 1.25rem;border-bottom:1px solid var(--border);align-items:start}
+.opt-entry:last-child{border-bottom:none}
+.opt-entry:hover{background:var(--lav)}
+.opt-date{font-size:0.65rem;color:var(--sub);font-family:monospace;margin-top:0.1rem}
+.opt-action{font-size:0.8rem;color:var(--sub);line-height:1.55}
+.opt-action strong{color:var(--text);font-weight:600}
+.opt-impact{font-size:0.68rem;font-weight:600;text-align:right;margin-top:0.1rem;white-space:nowrap;color:var(--green)}
+.learnings{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+.learn-card{background:var(--white);border-radius:1rem;padding:1.4rem;box-shadow:0 2px 10px rgba(0,0,0,0.05);border:1px solid transparent;transition:border-color 0.2s}
+.learn-card:hover{border-color:var(--accent)}
+.learn-num{font-size:2rem;font-weight:900;color:var(--border);line-height:1;margin-bottom:0.5rem}
+.learn-card h4{font-size:0.875rem;font-weight:700;color:var(--text);margin-bottom:0.3rem}
+.learn-card p{font-size:0.78rem;color:var(--sub);line-height:1.65}
+@media(max-width:768px){
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .chart-area{grid-template-columns:1fr}
+  .channel-cards{grid-template-columns:1fr}
+  .learnings{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="maja_jankowska_portfolio.html" class="nav-logo">← Back to portfolio</a>
+  <div class="nav-links">
+    <div class="nav-badge">Case Study 02 / 02</div>
+    <a href="case-study-poland-gamification.html">← Previous</a>
+    <a href="mailto:majaa.jankowskaa@gmail.com" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="kicker">📈 Paid Media · SEM · Meta · LinkedIn · Multi-Market</div>
+    <h1>From €50 CPL to €18 — a two-year paid media transformation</h1>
+    <p class="hero-sub">How rigorous campaign management, multi-channel optimisation, and data-led iteration across Google Ads, Meta, and LinkedIn reduced cost-per-lead by 64% while tripling qualified pipeline across 5 markets.</p>
+    <div class="meta-pills">
+      <div class="meta-pill"><strong>Markets:</strong> Denmark · Sweden · Poland · Germany · UK</div>
+      <div class="meta-pill"><strong>Channels:</strong> Google · Meta · LinkedIn</div>
+      <div class="meta-pill"><strong>Period:</strong> 2023 — 2025</div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="stat-val">−64%</div><div class="stat-label">Cost per lead reduction over 24 months</div></div>
+    <div><div class="stat-val">3.2×</div><div class="stat-label">Growth in qualified lead volume</div></div>
+    <div><div class="stat-val">5</div><div class="stat-label">Markets managed simultaneously</div></div>
+    <div><div class="stat-val">3</div><div class="stat-label">Paid channels owned end-to-end</div></div>
+  </div>
+</div>
+
+<div class="section fade">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <div class="pill">📋 Background</div>
+        <h2>Where it started</h2>
+        <p class="body-p">When I joined resOS in May 2023, paid campaigns were running but without a clear framework. Budget was split reactively, conversion tracking was broken, and cost-per-lead sat at an average of €50 with no visibility into which channels were driving quality leads.</p>
+        <p class="body-p">My first action was an audit: rebuilding GA4 tracking from scratch, unifying UTM parameters across all channels, and creating a single reporting view where channel performance could be directly compared.</p>
+      </div>
+      <div>
+        <div class="pill">🔄 The approach</div>
+        <h2>Systematic, iterative optimisation</h2>
+        <p class="body-p">Rather than overhauling everything at once, I followed a prioritise → test → scale methodology: identify the highest-leverage lever, run a structured experiment, measure, then kill or scale.</p>
+        <p class="body-p">Small wins in Q3 2023 stacked into significant CPL improvements by Q1 2024 — creating budget headroom reinvested into volume.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-alt fade">
+  <div class="wrap">
+    <div class="pill">📊 Performance dashboard</div>
+    <h2>Live campaign data — across all markets</h2>
+    <p class="body-p">Interactive dashboard. Switch periods to see how metrics evolved over time.</p>
+    <div class="dashboard">
+      <div class="dash-head">
+        <div class="dash-title">📊 Aggregated campaign performance</div>
+        <div class="period-tabs">
+          <button class="ptab active" onclick="switchPeriod(this,'q4')">Q4 2024</button>
+          <button class="ptab" onclick="switchPeriod(this,'q3')">Q3 2024</button>
+          <button class="ptab" onclick="switchPeriod(this,'q2')">Q2 2024</button>
+        </div>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi-cell"><div class="kpi-label">Total spend</div><div class="kpi-val" id="d-spend">€42,800</div><div class="kpi-delta delta-up" id="d-spend-d">↑ 18% vs prior</div></div>
+        <div class="kpi-cell"><div class="kpi-label">Avg. cost per lead</div><div class="kpi-val" id="d-cpl">€18.40</div><div class="kpi-delta delta-dn" id="d-cpl-d">↓ 31% vs prior</div></div>
+        <div class="kpi-cell"><div class="kpi-label">Qualified leads</div><div class="kpi-val" id="d-leads">2,326</div><div class="kpi-delta delta-up" id="d-leads-d">↑ 44% vs prior</div></div>
+        <div class="kpi-cell"><div class="kpi-label">Avg. conv. rate</div><div class="kpi-val" id="d-cvr">7.8%</div><div class="kpi-delta delta-up" id="d-cvr-d">↑ 2.1pp vs prior</div></div>
+      </div>
+      <div class="chart-area">
+        <div>
+          <div class="chart-label">Cost per lead by market — Q4 2024</div>
+          <div class="bar-chart">
+            <div class="bar-item"><div class="bar-mkt">🇩🇰 Denmark</div><div class="bar-track"><div class="bar-fill" style="width:0%;background:#1A1040" data-w="72"><span>€14.20</span></div></div><div class="bar-delta">−38%</div></div>
+            <div class="bar-item"><div class="bar-mkt">🇵🇱 Poland</div><div class="bar-track"><div class="bar-fill" style="width:0%;background:#312070" data-w="58"><span>€11.40</span></div></div><div class="bar-delta">−59%</div></div>
+            <div class="bar-item"><div class="bar-mkt">🇸🇪 Sweden</div><div class="bar-track"><div class="bar-fill" style="width:0%;background:#5B4B8A" data-w="88"><span>€17.30</span></div></div><div class="bar-delta">−22%</div></div>
+            <div class="bar-item"><div class="bar-mkt">🇩🇪 Germany</div><div class="bar-track"><div class="bar-fill" style="width:0%;background:#8B7BB5" data-w="100"><span>€19.70</span></div></div><div class="bar-delta">−18%</div></div>
+            <div class="bar-item"><div class="bar-mkt">🇬🇧 UK</div><div class="bar-track"><div class="bar-fill" style="width:0%;background:#B8ACDA" data-w="94"><span>€18.50</span></div></div><div class="bar-delta">−41%</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="chart-label">Budget split by channel</div>
+          <div class="ch-breakdown">
+            <div class="ch-row"><div class="ch-top"><span class="ch-name">Google Ads (Search)</span><span class="ch-pct">44%</span></div><div class="ch-bar"><div class="ch-fill" style="width:0%;background:#1A1040" data-w="44"></div></div></div>
+            <div class="ch-row"><div class="ch-top"><span class="ch-name">Meta Ads</span><span class="ch-pct">31%</span></div><div class="ch-bar"><div class="ch-fill" style="width:0%;background:#5B4B8A" data-w="31"></div></div></div>
+            <div class="ch-row"><div class="ch-top"><span class="ch-name">LinkedIn Ads</span><span class="ch-pct">15%</span></div><div class="ch-bar"><div class="ch-fill" style="width:0%;background:#8B7BB5" data-w="15"></div></div></div>
+            <div class="ch-row"><div class="ch-top"><span class="ch-name">Display / Retargeting</span><span class="ch-pct">10%</span></div><div class="ch-bar"><div class="ch-fill" style="width:0%;background:#C8C0E8" data-w="10"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Campaign</th><th>Market</th><th>Channel</th><th>Spend</th><th>Leads</th><th>CPL</th><th>CVR</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Student Move-in 2024</strong></td><td>🇩🇰 Denmark</td><td>Google Search</td><td class="num">€12,400</td><td class="num">874</td><td class="num good">€14.20</td><td class="num good">9.2%</td><td><span class="status s-done">Completed</span></td></tr>
+            <tr><td><strong>Gamified Lead Gen</strong></td><td>🇵🇱 Poland</td><td>Meta Ads</td><td class="num">€7,200</td><td class="num">631</td><td class="num good">€11.40</td><td class="num good">11.4%</td><td><span class="status s-live">Live</span></td></tr>
+            <tr><td><strong>Brand Awareness Wave</strong></td><td>🇸🇪 Sweden</td><td>Meta + Display</td><td class="num">€9,100</td><td class="num">526</td><td class="num">€17.30</td><td class="num">7.1%</td><td><span class="status s-done">Completed</span></td></tr>
+            <tr><td><strong>Consideration Retargeting</strong></td><td>🇩🇪 Germany</td><td>Google + Meta</td><td class="num">€8,600</td><td class="num">437</td><td class="num">€19.70</td><td class="num">6.8%</td><td><span class="status s-live">Live</span></td></tr>
+            <tr><td><strong>B2B Decision Makers</strong></td><td>🌐 Multi</td><td>LinkedIn</td><td class="num">€5,500</td><td class="num">165</td><td class="num bad">€33.30</td><td class="num">5.4%</td><td><span class="status s-done">Completed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section fade">
+  <div class="wrap">
+    <div class="pill">📡 Channel performance</div>
+    <h2>Three channels, one unified strategy</h2>
+    <p class="body-p">Each channel plays a distinct role in the funnel.</p>
+    <div class="channel-cards">
+      <div class="ch-card"><div class="ch-card-head"><div class="ch-icon">🔵</div><div><div class="ch-card-name">Google Search (SEM)</div><div class="ch-card-type">Intent capture · Bottom funnel</div></div></div><div class="ch-kpis"><div class="ch-kpi"><span class="ch-kpi-k">Avg. CPL</span><span class="ch-kpi-v good">€14.20</span></div><div class="ch-kpi"><span class="ch-kpi-k">Bid strategy</span><span class="ch-kpi-v">Target CPA</span></div><div class="ch-kpi"><span class="ch-kpi-k">Key wins</span><span class="ch-kpi-v">Negative keywords, RSA testing</span></div><div class="ch-kpi"><span class="ch-kpi-k">Avg. CVR</span><span class="ch-kpi-v good">9.2%</span></div><div class="ch-kpi"><span class="ch-kpi-k">Budget share</span><span class="ch-kpi-v">44%</span></div></div></div>
+      <div class="ch-card"><div class="ch-card-head"><div class="ch-icon">🔷</div><div><div class="ch-card-name">Meta Ads</div><div class="ch-card-type">Awareness + lead gen · Mid funnel</div></div></div><div class="ch-kpis"><div class="ch-kpi"><span class="ch-kpi-k">Avg. CPL</span><span class="ch-kpi-v good">€11.40</span></div><div class="ch-kpi"><span class="ch-kpi-k">Primary format</span><span class="ch-kpi-v">Lead Ads + video</span></div><div class="ch-kpi"><span class="ch-kpi-k">Key wins</span><span class="ch-kpi-v">Audience consolidation, gamification</span></div><div class="ch-kpi"><span class="ch-kpi-k">Best market</span><span class="ch-kpi-v good">Poland 🇵🇱</span></div><div class="ch-kpi"><span class="ch-kpi-k">Budget share</span><span class="ch-kpi-v">31%</span></div></div></div>
+      <div class="ch-card"><div class="ch-card-head"><div class="ch-icon">💼</div><div><div class="ch-card-name">LinkedIn Ads</div><div class="ch-card-type">B2B decision makers · Top funnel</div></div></div><div class="ch-kpis"><div class="ch-kpi"><span class="ch-kpi-k">Avg. CPL</span><span class="ch-kpi-v bad">€33.30</span></div><div class="ch-kpi"><span class="ch-kpi-k">Primary format</span><span class="ch-kpi-v">Sponsored content + Lead Gen Forms</span></div><div class="ch-kpi"><span class="ch-kpi-k">Note</span><span class="ch-kpi-v">Higher CPL justified — converts at 2.1× downstream</span></div><div class="ch-kpi"><span class="ch-kpi-k">Budget share</span><span class="ch-kpi-v">15%</span></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-alt fade">
+  <div class="wrap">
+    <div class="pill">🔧 Optimisation log</div>
+    <h2>Every improvement, documented</h2>
+    <p class="body-p">The highest-impact changes — this is how CPL dropped from €50 to €18.</p>
+    <div class="opt-log">
+      <div class="opt-log-head">Optimisation history — selected actions</div>
+      <div class="opt-entry"><div class="opt-date">Jun 2023</div><div class="opt-action"><strong>Rebuilt GA4 event tracking + UTM framework</strong> — full-funnel visibility from ad click to lead. Previously 40% of conversions were unattributed.</div><div class="opt-impact">+40% attribution</div></div>
+      <div class="opt-entry"><div class="opt-date">Aug 2023</div><div class="opt-action"><strong>Switched Google Ads to Target CPA bidding</strong> — shifted budget from broad intent terms to high-intent clusters.</div><div class="opt-impact">CPL −22%</div></div>
+      <div class="opt-entry"><div class="opt-date">Oct 2023</div><div class="opt-action"><strong>Landing page rewrite</strong> — removed long-form hero copy, replaced with pain-point headline + single CTA. A/B tested with 2,200 visits per variant.</div><div class="opt-impact">CVR +2.8pp</div></div>
+      <div class="opt-entry"><div class="opt-date">Jan 2024</div><div class="opt-action"><strong>Consolidated Meta audience segments</strong> from 11 ad sets to 4 broader audiences — eliminated overlap driving up CPMs.</div><div class="opt-impact">CPM −34%</div></div>
+      <div class="opt-entry"><div class="opt-date">Mar 2024</div><div class="opt-action"><strong>Launched video creative on Meta</strong> — customer testimonial format outperformed static by 47% on CTR and 31% on CPL.</div><div class="opt-impact">CTR +47%</div></div>
+      <div class="opt-entry"><div class="opt-date">Jun 2024</div><div class="opt-action"><strong>AI-assisted copy generation</strong> for RSA headline variants — 40 headlines per campaign, algorithm selects winners, manual refinement of top performers.</div><div class="opt-impact">CTR +19%</div></div>
+      <div class="opt-entry"><div class="opt-date">Sep 2024</div><div class="opt-action"><strong>Launched gamified lead capture in Poland</strong> — spin-to-win mechanic with automated Google Sheets pipeline, replacing standard lead form entirely.</div><div class="opt-impact">CPL −59%</div></div>
+      <div class="opt-entry"><div class="opt-date">Nov 2024</div><div class="opt-action"><strong>Built Power BI dashboard for monthly stakeholder reporting</strong> — pulling live data from Google Ads, Meta, and GA4. Replaced 4-hour manual report.</div><div class="opt-impact">4h saved/mo</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section fade">
+  <div class="wrap">
+    <div class="pill">💡 Key learnings</div>
+    <h2>What two years of iteration taught me</h2>
+    <div class="learnings">
+      <div class="learn-card"><div class="learn-num">01</div><h4>Attribution first, always</h4><p>You can't optimise what you can't measure. Rebuilding tracking was the single highest-ROI action in month one — everything else depended on it being right.</p></div>
+      <div class="learn-card"><div class="learn-num">02</div><h4>Audience consolidation beats fragmentation</h4><p>More ad sets ≠ more control. Fewer, broader audiences consistently lowered CPMs and gave platform algorithms more signal to optimise against.</p></div>
+      <div class="learn-card"><div class="learn-num">03</div><h4>Creative is the most underestimated lever</h4><p>Bid strategy and audience optimisation have a ceiling. Creative — especially video and interactive formats — was the most consistent source of step-change CPL improvement.</p></div>
+      <div class="learn-card"><div class="learn-num">04</div><h4>Markets behave differently — use it</h4><p>What worked in Denmark didn't work in Poland. Localising the mechanic, not just the language, consistently outperformed translated copies of successful campaigns.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-footer">
+  <div class="pf-info">
+    <p>Case Study 02 of 02</p>
+    <strong>Maja Jankowska — Paid Campaigns Manager</strong>
+    <p style="margin-top:0.15rem">majaa.jankowskaa@gmail.com · +45 50 25 39 69</p>
+  </div>
+  <div class="pf-links">
+    <a href="case-study-poland-gamification.html" class="btn-ghost-w">← Gamification case study</a>
+    <a href="maja_jankowska_portfolio.html" class="btn-white">Back to portfolio</a>
+  </div>
+</div>
+
+<script>
+const periods={
+  q4:{spend:'€42,800',cpl:'€18.40',leads:'2,326',cvr:'7.8%',ds:'↑ 18% vs prior',dc:'↓ 31% vs prior',dl:'↑ 44% vs prior',dv:'↑ 2.1pp vs prior'},
+  q3:{spend:'€36,200',cpl:'€26.60',leads:'1,615',cvr:'5.7%',ds:'↑ 12% vs prior',dc:'↓ 18% vs prior',dl:'↑ 22% vs prior',dv:'↑ 0.9pp vs prior'},
+  q2:{spend:'€32,400',cpl:'€32.40',leads:'1,000',cvr:'4.8%',ds:'↑ 8% vs prior',dc:'↓ 11% vs prior',dl:'↑ 14% vs prior',dv:'↑ 0.6pp vs prior'}
+};
+function switchPeriod(btn,p){
+  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const d=periods[p];
+  document.getElementById('d-spend').textContent=d.spend;
+  document.getElementById('d-cpl').textContent=d.cpl;
+  document.getElementById('d-leads').textContent=d.leads;
+  document.getElementById('d-cvr').textContent=d.cvr;
+  document.getElementById('d-spend-d').textContent=d.ds;
+  document.getElementById('d-cpl-d').textContent=d.dc;
+  document.getElementById('d-leads-d').textContent=d.dl;
+  document.getElementById('d-cvr-d').textContent=d.dv;
+}
+function animateBars(){
+  document.querySelectorAll('.bar-fill[data-w]').forEach(el=>{setTimeout(()=>{el.style.width=el.dataset.w+'%'},300)});
+  document.querySelectorAll('.ch-fill[data-w]').forEach(el=>{setTimeout(()=>{el.style.width=el.dataset.w+'%'},500)});
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>{e.target.classList.add('in');animateBars()},i*60)}});
+},{threshold:0.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
